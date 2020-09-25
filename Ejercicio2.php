@@ -13,6 +13,9 @@
   <body>
       <form action="Ejercicio2.php" method="post">
           <div class="container">
+            <h3>
+              Consulte su IMC
+            </h3>
               <div class="row">
                   <div class="col-lg-3">
                     <input type="text" class="form-control" placeholder="Nombre">
