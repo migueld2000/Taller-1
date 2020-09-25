@@ -13,18 +13,20 @@
   <body>
     <form action="Ejercicio5.php" method="post">
     <div class="container">
+    <h3>Sueldo semanal</h3>
       <div class="row">
-        <div class="col-lg-3">
-          <h4>Salario</h4><input type="text" class="form-control"name="salario">
-        </div>
-        <div class="col-lg-3">
+        <div class="col-lg-6">
           <h4>Horas</h4><input type="text" class="form-control"name="horas">
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-6">
           <h4>Horas extras</h4><input type="text" class="form-control"name="horasextras">
         </div>
-        <div class="col-lg-3">
-          <button type="submit"class="btn btn-primary btn-sm-4 mt-3" name="calcular">Calcular</button>
+        <div class="w-100"></div>
+        <div class="col-lg-12">
+          <br>
+        <center>
+        <button type="submit"class="btn btn-primary btn-sm-4" name="calcular">Calcular</button>
+        </center>
         </div>
       </div>
     </div>
@@ -41,26 +43,26 @@
 <?php if(isset($_POST["calcular"])): ?>
 
 <?php 
-    $salario=$_POST["salario"];
     $horas=$_POST["horas"];
     $horasextras=$_POST["horasextras"];
     $calcular;
+    
 
-    $calcular=$salario + 20000;
-    echo("El sueldo semanal es de: " . $calcular);
+    $calcular=$horas * 20000;
+    
+    echo("Por las horas trabajas la paga es de: " . $calcular);
+    echo("<br>");
+   
     if($horasextras>=1)
     {
-      $calcular=$salario + 25000 * $horasextras;
-      echo(", y con las horas extras el sueldo es de: " . $calcular);
+      $calcular=$horas*20000+(25000*$horasextras);
+      echo("Por las horas extras trabajas la paga es de: " . $calcular);
+
     }
     elseif($horasextras=="")
     {
       echo(" No se registran hoaras extras para calcular el sueldo");
     }
-
-
-
 ?>
-
 
 <?php endif  ?>
