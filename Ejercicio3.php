@@ -13,6 +13,9 @@
   <body>
     <form action="Ejercicio3.php" method="post">
         <div class="container">
+          <h3>
+          Compre de zapatos      
+        </h3>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group">
