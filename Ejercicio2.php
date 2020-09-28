@@ -47,46 +47,48 @@ $peso=$_POST["peso"];
 $altura=$_POST["altura"];
 $imc;
 
-$imc=$peso/$altura*$altura;
+$imc=$peso/($altura*$altura);
 
 if($imc<18.5)
 {
-    echo("Su IMC es de:" . $imc."(peso insuficiente)");
+    echo("Su IMC es de:" . $imc." (peso insuficiente)");
 }
- elseif ($imc>=18.5 or $imc<=24.9)
+ elseif ($imc>=18.5 and $imc<=24.9)
  {
-    echo("Su IMC es de:" . $imc."(peso normal)");
+    echo("Su IMC es de:" . $imc." (peso normal)");
  }   
- elseif ($imc>=25 or $imc<=26.9) 
+ elseif ($imc>=25 and $imc<=26.9) 
  {
-     echo("Su IMC es de:" . $imc."(sobrepeso grado 1)");
- }   
-
- elseif ($imc>=27 or $imc<=29.9)
- {
-     echo("Su IMC es de:" . $imc."(sobrepeso grado 2/ preobesidad)");
+     echo("Su IMC es de:" . $imc." (sobrepeso grado 1)");
  }   
 
- elseif ($imc>=30 or $imc<=34.9)
+ elseif ($imc>=27 and $imc<=29.9)
  {
-     echo("Su IMC es de:" . $imc."(obesidad de tipo 1)");
+     echo("Su IMC es de:" . $imc." (sobrepeso grado 2/ preobesidad)");
  }   
 
- elseif ($imc>=35 or $imc<=39.9)
+ elseif ($imc>=30 and $imc<=34.9)
  {
-     echo("Su IMC es de:" . $imc."(obesidad de tipo 2)");
+     echo("Su IMC es de:" . $imc." (obesidad de tipo 1)");
  }   
 
- elseif ($imc>=40 or $imc<=49.9)
+ elseif ($imc>=35 and $imc<=39.9)
  {
-     echo("Su IMC es de:" . $imc."(obesidad de tipo 3/mórbida)");
+     echo("Su IMC es de:" . $imc." (obesidad de tipo 2)");
+ }   
+
+ elseif ($imc>=40 and $imc<=49.9)
+ {
+     echo("Su IMC es de:" . $imc." (obesidad de tipo 3/mórbida)");
  }   
 
  elseif ($imc>=50)
  {
-     echo("Su IMC es de:" . $imc."(obesidad de tipo 4/extrema)");
+     echo("Su IMC es de:" . $imc." (obesidad de tipo 4/extrema)");
  }   
 ?>
 
 <?php   endif  ?>
+
+
 
